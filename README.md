@@ -10,7 +10,7 @@ A word puzzle game website.
 - [jQuery](https://jquery.com)
 - [buzz](https://buzz.jaysalvat.com)
 
-## How this project was deployed with Zeit
+### How this project was deployed with Zeit
 
 There are a number of ways to host your project for free. This project was deployed using [ZEIT Now](http://bit.ly/fem-zeit). If you'd like to use ZEIT, here are some steps to follow to get started:
 
@@ -19,7 +19,7 @@ There are a number of ways to host your project for free. This project was deplo
 2. Connect your project to ZEIT Now from the ["Create a new project" page](https://zeit.co/new), using the "New Project From GitHub" button and selecting the project you want to deploy.
 3. Once connected, every time you `git push`, ZEIT Now will create a new [deployment](https://zeit.co/docs/v2/platform/deployments) and the deployment URL will be shown on your [ZEIT Dashboard](https://zeit.co/dashboard). You will also receive an email for each deployment with the URL.
 
-Source:[Frontend Mentor](https://www.frontendmentor.io)
+   Source: [Frontend Mentor](https://www.frontendmentor.io)
 <!-- ### :arrow_forward: How to run
 
 Inside the terminal:
