@@ -8,7 +8,7 @@ A word puzzle game website.
 - [HTML](https://www.w3.org)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [jQuery](https://jquery.com)
-- [buzz](https://buzz.jaysalvat.com)
+- [Buzz!](https://buzz.jaysalvat.com)
 
 ### How this project was deployed with Zeit
 
