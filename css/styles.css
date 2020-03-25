@@ -7,7 +7,7 @@ Complementary Color:
 */
 body {
 	background:#444;
-	font:300%/40px 'Permanent Marker', Arial, Serif;
+	font:300%/40px 'Luckiest Guy', cursive;
 	color:#000;
 }
 	#warning {
@@ -21,7 +21,7 @@ body {
 		background:rgba( 0, 0, 0, 0.8 );	
 		text-align:center;
 		color:#FFF;
-		font:30px/40px 'Permanent Marker', Arial, Serif;
+		font:30px/40px 'Luckiest Guy', cursive;
 		padding-top:25%;
 		z-index:1000;
 	}
@@ -30,14 +30,15 @@ body {
 			text-decoration:none;
 		}
 	
+	/* (Font) Game Learning English - Word Puzzle  */
 	#header {
-		background:#222;
+		/* background:#222; */
 		width:100%;
 		top:0;
 		left:0;
 		position:absolute;	
-		font:18px/30px 'Yanone Kaffeesatz', Arial, Serif;
-		color:#FFF;
+		font:40px/50px 'Luckiest Guy', cursive;
+		color:rgb(0, 0, 0);
 		text-align:center;
 	}
 		#header p {
@@ -49,6 +50,8 @@ body {
 			color:#7FA917;
 			font-weight:400;
 		}
+	
+	/* (font) demo bottom */
 	#footer {
 		font:14px/30px 'Yanone Kaffeesatz', Arial, Serif;
         width:640px;
@@ -63,10 +66,10 @@ body {
     #container {
 		background:url(../img/bg.png) no-repeat top center;
         width:800px;
-		height:550px;
-		margin:40px auto 0 auto;
+		height:570px;
+		margin:0px auto 0 auto;
 		position:relative;
-		padding:50px 0 0 0;
+		padding:110px 0 0 0;
     }
 	#models {
 		margin:0 auto;
@@ -91,7 +94,7 @@ body {
 	#letters li {
 		background:#FFF;
 		background:-moz-linear-gradient( #FFF, #AAA );
-		background:-webkit-gradient( linear, left top, left bottom, color-stop( 0, #FFF ), color-stop( 1, #AAA ) );
+		background:-webkit-gradient( linear, left top, left bottom, color-stop( 0, rgb(73, 73, 73) ), color-stop( 1, #AAA ) );
 		background:-o-linear-gradient(top, #FFF, #AAA);
 		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF');
 		border:1px solid #FFF;
@@ -135,13 +138,28 @@ body {
 	    top:130px;
 	    left:80px;
 	}
+
+	#Select{
+		top:0;
+		right:0;
+		position:absolute;
+	    text-decoration:none;
+		color:#000;
+		font:300%/40px 'Luckiest Guy', cursive;
+		color:rgba( 0, 0, 0, 0.5 ) !important;
+		font-size:150%;
+		padding:0 100px;
+	}
+
+
+
 	#level {
 	    top:0;
 		right:0;
 		position:absolute;
 	    text-decoration:none;
 		color:#000;
-		font:300%/40px 'Permanent Marker', Arial, Serif;
+		font:300%/40px 'Luckiest Guy', cursive;
 		color:rgba( 0, 0, 0, 0.5 ) !important;
 		font-size:200%;
 		cursor:pointer;
@@ -174,7 +192,7 @@ body {
 		padding:3px 0;
 	}
 	.bsa_it_t {
-		font:18px 'Yanone Kaffeesatz', Arial, Serif;
+		font:18px 'Luckiest Guy', cursive;
 		color:#8B1361;
 	}
 	.bsa_it_d {
