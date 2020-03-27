@@ -1,3 +1,7 @@
+<h1 align="center">
+    <img alt="MagicJvers" src="./images/MagicJVers.png" width="400px" />
+</h1>
+
 ## Word Puzzle Game
 
 A word puzzle game website.
