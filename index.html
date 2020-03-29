@@ -20,20 +20,28 @@
     </div>
     
     <div id="container">
-        <img id="picture" src="img/koala.png">
+        <img id="picture" src="img/frog.png">
+        
         <ul id="models"></ul>
         <ul id="letters"></ul>
         
-        <a href="#" id="previous"><</a>
-        <a href="#" id="next">></a>
+        <a id="previous" href="#">&lt;</a>
+        <a id="next" href="#">&gt;</a>
     </div>
     
     <div id="footer">
-        <p>Demo by MagicJvers</a></p>
-        <a href="#" id="Select">Select Level:</a>
-        <a href="#" id="level">easy</a>
+        <div class="line"></div>
+        <p class="demo">Demo by MagicJvers</p>
+        <div class="select-level">
+            <p id="select-label">Select Level:</p>
+            <select name="select-options" id="select-options"> <!--  -->
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard" selected>Hard</option>
+            </select>
+        </div>
     </div>
-    
+   
     
     <div id="warning">
         Your browser doesn't support<br>the HTML5 audio element.<br><a href="http://www.google.com/chrome/">Please upgrade!</a>

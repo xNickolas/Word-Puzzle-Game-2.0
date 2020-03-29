@@ -11,6 +11,7 @@ buzz.defaults.formats = [ 'ogg', 'mp3' ];
 buzz.defaults.preload = 'metadata';
 
 var games = [
+    { img: 'img/frog.png', color:'#32cd32', word: 'frog', sound: '' }, //<-
     { img: 'img/1-koala2.png', color:'#176580', word: 'koala', sound: '' }, //<-
     { img: 'img/2-croc.png', color:'#d5ea86', word: 'crocodile', sound: 'sounds/croc' }, //<-
     { img: 'img/3-monkey2.png', color:'#ffc48b', word: 'monkey', sound: 'sounds/monkey' }, //<-
@@ -19,7 +20,6 @@ var games = [
     { img: 'img/6-cat.png', color:'#363636', word: 'cat', sound: 'sounds/meow' }, //<-
     { img: 'img/7-elephant2.png', color:'#a9a9a9', word: 'elephant', sound: 'sounds/elephant2' }, //<-
     { img: 'img/8-rabbit2.png', color:'#f5deb3', word: 'rabbit', sound: '' }, //<-
-    { img: 'img/9-frog.png', color:'#32cd32', word: 'frog', sound: '' }, //<-
     { img: 'img/bear.png', color:'#807148', word: 'bear', sound: 'sounds/bear' },
     { img: 'img/horse.png', color:'#bc9e6c', word: 'horse', sound: 'sounds/horse' },
     { img: 'img/bull.png', color:'#ff5f09', word: 'bull', sound: 'sounds/bull' },
@@ -66,16 +66,48 @@ $( function() {
        return false;
     });
 
-    $( '#level' ).click( function() {
-        if ( $( this ).text() == 'easy' ) {
-            $( this ).text( 'hard' );
-            $models.addClass( 'hard' );
-        } else {
-            $( this ).text( 'easy' );
-            $models.removeClass( 'hard' );
-        }
+    // $( '#level' ).click( function() {
+    //     if ( $( this ).text() == 'easy' ) {
+    //         $( this ).text( 'hard' );
+    //         $models.addClass( 'hard' );
+    //     } else {
+    //         $( this ).text( 'easy' );
+    //         $models.removeClass( 'hard' );
+    //     }
+    //     return false;
+    // });
+
+    $('#select-options').change(function () {
+        levelDifficulty();
         return false;
     });
+
+    // called here to initially begin on the state set in HTML selected option
+    levelDifficulty();
+
+    function levelDifficulty() {
+        let select = document.querySelector('select');
+        let option = select.children[select.selectedIndex];
+        let text = option.textContent;
+        switch (text) {
+            case 'Easy':
+                // $(this).text('easy');
+                console.log("on easy mode: " + text);
+                $models.removeClass('hard');
+
+                break;
+            case 'Medium':
+                break
+            case 'Hard':
+                console.log("on hard mode");
+                // $(this).text('hard');
+                $models.addClass('hard');
+                break
+
+            default:
+                break;
+        }
+    }
 
     function refreshGame() {
         $( '#models' ).html( '' );
