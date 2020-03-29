@@ -6,6 +6,7 @@
 // Yes, we make magic!
 // ----------------------------------------------------------------------------
 
+// s -> t and c -> v
 
 buzz.defaults.formats = [ 'ogg', 'mp3' ];
 buzz.defaults.preload = 'metadata';
@@ -32,11 +33,10 @@ var games = [
 var winSound        = new buzz.sound('sounds/win' ),
     errorSound      = new buzz.sound('sounds/error' ),
     alphabetSounds  = {},
-    alphabet        = 'abcdefghijklmnopqrstuvwxyz'.split( '' );
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-for( var i in alphabet ) {
-    var letter = alphabet[ i ];
-    alphabetSounds[ letter ] = new buzz.sound('sounds/kid/'+ letter );
+for (let letterIndex in alphabet) {
+    alphabetSounds[alphabet[letterIndex]] = new buzz.sound('sounds/kid/' + alphabet[letterIndex]);
 }
 
 $( function() {
@@ -65,17 +65,6 @@ $( function() {
        buildGame( --idx ); 
        return false;
     });
-
-    // $( '#level' ).click( function() {
-    //     if ( $( this ).text() == 'easy' ) {
-    //         $( this ).text( 'hard' );
-    //         $models.addClass( 'hard' );
-    //     } else {
-    //         $( this ).text( 'easy' );
-    //         $models.removeClass( 'hard' );
-    //     }
-    //     return false;
-    // });
 
     $('#select-options').change(function () {
         levelDifficulty();
@@ -146,8 +135,8 @@ $( function() {
         // Build model
         var modelLetters = game.word.split( '' );
 
-        for( var i in modelLetters ) {
-            var letter = modelLetters[ i ];
+        for( let i in modelLetters ) {
+            let letter = modelLetters[ i ];
             $models.append( '<li>' + letter + '</li>' );
         }
 
@@ -159,7 +148,7 @@ $( function() {
         var letters  = game.word.split( '' ),
             shuffled = letters.sort( function() { return Math.random() < 0.5 ? -1 : 1 });
 
-        for( var i in shuffled ) {
+        for( let i in shuffled ) {
             $letters.append( '<li class="draggable">' + shuffled[ i ] + '</li>' );
         }
 
@@ -176,7 +165,7 @@ $( function() {
             rotate( this, angle );
 
             $( this ).mousedown( function() {
-                var letter = $( this ).text();
+                let letter = $( this ).text();
                 if ( alphabetSounds[ letter ] ) {
                     alphabetSounds[ letter ].play();
                 }
