@@ -5,6 +5,9 @@ Primary Color:
 Complementary Color:
 8B1361	692451	5C073E	CA4B9D	CA71AB
 */
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
 body {
 	background:#444;
 	font:300%/40px 'Luckiest Guy', cursive;
@@ -122,14 +125,21 @@ body {
 		border:1px solid rgba( 0, 0, 0, 0.5 );
 	}
 	#next, #previous {
+		font-family: 'Permanent Marker', cursive;
 	  position:absolute;
 	  text-decoration:none;
 		color:#000;
-		color:rgba( 0, 0, 0, 0.5 );
-		font-size:200%;
+		font-size:100%;
 		cursor:pointer;
 		outline:0;
+    opacity: .5;
+    transition: opacity 1s;
 	}
+
+	#next:hover, #previous:hover {
+		opacity: 0.8;
+	}
+
 	#next {
 	    top:130px;
 	    right:80px;
