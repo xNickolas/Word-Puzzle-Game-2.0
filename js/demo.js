@@ -30,7 +30,7 @@ var games = [
     
 ];
 
-var winSound        = new buzz.sound('sounds/win' ),
+var winSound        = new buzz.sound('sounds/levelWin' ),
     errorSound      = new buzz.sound('sounds/error' ),
     alphabetSounds  = {},
     alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
