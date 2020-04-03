@@ -12,7 +12,7 @@ buzz.defaults.formats = [ 'ogg', 'mp3' ];
 buzz.defaults.preload = 'metadata';
 
 var games = [
-    { img: 'img/frog.png', color:'#32cd32', word: 'frog', sound: '' }, //<-
+    { img: 'img/frog.png', color:'#32cd32', word: 'frog', sound: 'sounds/frog' }, //<-
     { img: 'img/1-koala2.png', color:'#176580', word: 'koala', sound: '' }, //<-
     { img: 'img/2-croc.png', color:'#d5ea86', word: 'crocodile', sound: 'sounds/croc' }, //<-
     { img: 'img/3-monkey2.png', color:'#ffc48b', word: 'monkey', sound: 'sounds/monkey' }, //<-
@@ -24,9 +24,15 @@ var games = [
     { img: 'img/bear.png', color:'#807148', word: 'bear', sound: 'sounds/bear' },
     { img: 'img/horse.png', color:'#bc9e6c', word: 'horse', sound: 'sounds/horse' },
     { img: 'img/bull.png', color:'#ff5f09', word: 'bull', sound: 'sounds/bull' },
-    { img: 'img/tiger.png', color:'#b3eef4', word: 'tiger', sound: '' },
+    { img: 'img/tiger.png', color:'#b3eef4', word: 'tiger', sound: 'sounds/lion' },
     { img: 'img/turtle.png', color:'#d5ea86', word: 'turtle', sound: '' },
     { img: 'img/lion1.png', color:'#dd992d', word: 'lion', sound: 'sounds/lion' },
+    { img: 'images/bee.png', color:'#C19850', word: 'bee', sound: 'sounds/bee' },
+    { img: 'images/skunk_walk_01.png', color:'#7986AA', word: 'skunk', sound: '' },
+    { img: 'images/ant.png', color:'#BCC9BB', word: 'ant', sound: '' },
+    { img: 'images/icon_ladybug.png', color:'#AA86AA', word: 'ladybug', sound: '' },
+    { img: 'images/icon_penguinjump.png', color:'#8688A8', word: 'penguin', sound: '' },
+      
     
 ];
 
