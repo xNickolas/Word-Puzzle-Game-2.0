@@ -71,31 +71,54 @@ $( function() {
         return false;
     });
 
-    // called here to initially begin on the state set in HTML selected option
-    levelDifficulty();
-
     function levelDifficulty() {
         let select = document.querySelector('select');
         let option = select.children[select.selectedIndex];
         let text = option.textContent;
         switch (text) {
             case 'Easy':
-                // $(this).text('easy');
-                console.log("on easy mode: " + text);
-                $models.removeClass('hard');
-
+                setEasyDifficulty();
                 break;
             case 'Medium':
+                setMediumDifficulty();
                 break
             case 'Hard':
-                console.log("on hard mode");
-                // $(this).text('hard');
-                $models.addClass('hard');
+                setHardDifficulty();
                 break
 
             default:
                 break;
         }
+    }
+
+    function setEasyDifficulty() {
+        $models.find('li').each(function (i) {
+            $(this).css({
+                color: 'rgba(0, 0, 0, 0.7)'
+            });
+        });
+    }
+
+    function setMediumDifficulty() {
+        $models.find('li').each(function (i) {
+            if (i % 3 == 0) {
+                $(this).css({
+                    color: 'rgba(0, 0, 0, 0.7)'
+                });
+            } else {
+                $(this).css({
+                    color: 'transparent'
+                });
+            }
+        });
+    }
+
+    function setHardDifficulty() {
+        $models.find('li').each(function (i) {
+            $(this).css({
+                color: 'transparent'
+            });
+        });
     }
 
     function refreshGame() {
@@ -137,6 +160,7 @@ $( function() {
 
         for( let i in modelLetters ) {
             let letter = modelLetters[ i ];
+            // build li html components (letters in the right position inside the ghost cards)
             $models.append( '<li>' + letter + '</li>' );
         }
 
@@ -152,6 +176,7 @@ $( function() {
             $letters.append( '<li class="draggable">' + shuffled[ i ] + '</li>' );
         }
 
+        // positon and angle of the letters cards 
         $letters.find( 'li' ).each( function( i ) {
             var top   = ( $models.position().top ) + ( Math.random() * 100 ) + 80,
                 left  = ( $models.offset().left - $container.offset().left ) + ( Math.random() * 20 ) + ( i * letterWidth ),
@@ -176,6 +201,9 @@ $( function() {
             zIndex: 9999,
             stack: '#letters li'
         });
+
+        // called here to initially begin on the state set in HTML selected option
+        levelDifficulty();
 
         $models.find( 'li' ).droppable( {
             accept:     '.draggable',

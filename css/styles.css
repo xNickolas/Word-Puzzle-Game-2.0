@@ -13,204 +13,219 @@ body {
 	font:300%/40px 'Luckiest Guy', cursive;
 	color:#000;
 }
-	#warning {
-		display:none;
-		position:fixed;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		background:#000;
-		background:rgba( 0, 0, 0, 0.8 );	
-		text-align:center;
+
+#warning {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	background:rgba( 0, 0, 0, 0.8 );	
+	text-align:center;
+	color:#FFF;
+	font:30px/40px 'Luckiest Guy', cursive;
+	padding-top:25%;
+	z-index:1000;
+}
+
+#warning a {
+	color:#68812C;
+	text-decoration:none;
+}
+
+/* (Font) Game Learning English - Word Puzzle  */
+#header {
+	width:100%;
+	top:0;
+	left:0;
+	position:absolute;	
+	font:40px/50px 'Luckiest Guy', cursive;
+	color:rgb(0, 0, 0);
+	text-align:center;
+}
+
+#header p {
+	padding:5px 10px;	
+	margin:0;
+}
+
+#header a {
+	text-decoration:none;
+	color:#7FA917;
+	font-weight:400;
+}
+
+/* (font) demo bottom */
+#footer {
+	font:14px/30px 'Yanone Kaffeesatz', Arial, Serif;
+	width:640px;
+	margin:0px auto;
+	position:relative;
+	padding:0;
+}
+	#footer a {
+		text-decoration:none;
 		color:#FFF;
-		font:30px/40px 'Luckiest Guy', cursive;
-		padding-top:25%;
-		z-index:1000;
 	}
-		#warning a {
-			color:#68812C;
-			text-decoration:none;
-		}
-	
-	/* (Font) Game Learning English - Word Puzzle  */
-	#header {
-		/* background:#222; */
-		width:100%;
-		top:0;
-		left:0;
-		position:absolute;	
-		font:40px/50px 'Luckiest Guy', cursive;
-		color:rgb(0, 0, 0);
-		text-align:center;
-	}
-		#header p {
-			padding:5px 10px;	
-			margin:0;
-		}
-		#header a {
-			text-decoration:none;
-			color:#7FA917;
-			font-weight:400;
-		}
-	
-	/* (font) demo bottom */
-	#footer {
-		font:14px/30px 'Yanone Kaffeesatz', Arial, Serif;
-        width:640px;
-		margin:0px auto;
-		position:relative;
-		padding:0;
-	}
-		#footer a {
-			text-decoration:none;
-			color:#FFF;
-		}
-    #container {
-		background:url(../img/bg.png) no-repeat top center;
-        width:800px;
-		height:570px;
-		margin:0px auto 0 auto;
-		position:relative;
-		padding:110px 0 0 0;
-    }
-	#models {
-		margin:0 auto;
-		padding:0;
-	}
-	#picture {
-	    display:block;
-	    width:256px;
-	    height:256px;
-		margin:0 auto;
-	}
-	#models li, #letters li {
-		border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;
-	    list-style:none;
-	    padding:0;
-		margin:2px;
-		width:50px;
-		height:50px;
-		float:left;
-		text-align:center;
-	}
-	#letters li {
-		background:#FFF;
-		background:-moz-linear-gradient( #FFF, #AAA );
-		background:-webkit-gradient( linear, left top, left bottom, color-stop( 0, rgb(73, 73, 73) ), color-stop( 1, #AAA ) );
-		background:-o-linear-gradient(top, #FFF, #AAA);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF');
-		border:1px solid #FFF;
-		box-shadow:0px 2px 10px #000; -moz-box-shadow:0px 2px 10px #000; -webkit-box-shadow:0px 2px 10px #000;
-		position:absolute;
-	}
-	#letters li.draggable {
-		cursor:move;
-	}
-	#models {
-		margin-top:30px;	
-	}
-	#models li {
-		border:1px solid #000;
-		border:1px solid rgba( 0, 0, 0, 0.7 );
-		color:#000;
-		color:rgba( 0, 0, 0, 0.7 );
-	}
-	#models.hard li {
-		color:rgba( 0, 0, 0, 0 );
-	}
-	#models li.hover {
-		background:#000;
-		background:rgba( 0, 0, 0, 0.2 );
-		border:1px solid rgba( 0, 0, 0, 0.5 );
-	}
-	#next, #previous {
-		font-family: 'Permanent Marker', cursive;
-	  position:absolute;
-	  text-decoration:none;
-		color:#000;
-		font-size:100%;
-		cursor:pointer;
-		outline:0;
-    opacity: .5;
-    transition: opacity 1s;
+	#container {
+	background:url(../img/bg.png) no-repeat top center;
+	width:800px;
+	height:570px;
+	margin:0px auto 0 auto;
+	position:relative;
+	padding:110px 0 0 0;
 	}
 
-	#next:hover, #previous:hover {
-		opacity: 0.8;
-	}
+#models {
+	margin:0 auto;
+	padding:0;
+}
 
-	#next {
-	    top:130px;
-	    right:80px;
-	}
-	#previous {
-	    top:130px;
-	    left:80px;
-	}
+#picture {
+	display:block;
+	width:256px;
+	height:256px;
+	margin:0 auto;
+}
 
-	.line {
-		width: 100%;
-		height: 1px;
-		background-color: black;
-		margin: 0 auto;
-	}
-	.select-level{
-		text-align-last: center;
-		/* position: absolute; */
-		padding: 23.5px 0 0 0;
-		bottom: 0;
-		margin-left: -65px; 
-		left: 50%;
-		/* display: flex;
-		flex-direction: row; */
-		/* width: 300px; */
-		vertical-align: center;
+#models li, #letters li {
+	border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;
+	list-style:none;
+	padding:0;
+	margin:2px;
+	width:50px;
+	height:50px;
+	float:left;
+	text-align:center;
+}
 
-	}
+#letters li {
+	background:#FFF;
+	background:-moz-linear-gradient( #FFF, #AAA );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop( 0, rgb(73, 73, 73) ), color-stop( 1, #AAA ) );
+	background:-o-linear-gradient(top, #FFF, #AAA);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF');
+	border:1px solid #FFF;
+	box-shadow:0px 2px 10px #000; -moz-box-shadow:0px 2px 10px #000; -webkit-box-shadow:0px 2px 10px #000;
+	position:absolute;
+}
 
-	#select-label{
-		/* top: -27px; */
-		/* margin-right: 300px; */
-		/* margin-right: -1000px; 
-		left: 50%;
-		color:#000;
-		font-size:150%; */
-		color:rgba( 0, 0, 0, 0.5 ) !important;
-		font:300%/40px 'Luckiest Guy', cursive;
-		position: absolute; 
-		bottom: calc(50% - 30px);
-		font-size: 2em;
-		bottom: 0;
-		/* width: 150px; */
-		margin-left: -85px;
-		left: 50%;
-		text-align: center;
+#letters li.draggable {
+	cursor:move;
+}
 
-	}
+#models {
+	margin-top:30px;	
+}
 
-	select{
-		/* margin-left: 100px; */
-		cursor:pointer;
-		font: 300%/40px 'Luckiest Guy', cursive;
-		background-color: rgba(0, 0, 0, 0.0);
-		color:rgba(0, 0, 0, 0.5) !important;
-		font-size: 150%;
-		/* width: 115px; */
-		height: 20px; 
-		text-align: center;
-		text-align-last: center;
-		-moz-text-align-last: center;
-		position: absolute;
-		/* top: 0px; */
-		/* right: -30px; */
-		/* margin: 0 auto; */
-		/* direction: rtl; */
+#models li {
+	border:1px solid #000;
+	border:1px solid rgba( 0, 0, 0, 0.7 );
+	color:#000;
+	color:rgba( 0, 0, 0, 0.7 );
+}
 
-    bottom: 0;
-    margin-left: -55px;
-    left: 50%;
-    text-align: center;
-	}
+/* turns letters invisible */
+/* #models.hard li {
+	color:rgba( 0, 0, 0, 0 );
+} */
+
+#models li.hover {
+	background:#000;
+	background:rgba( 0, 0, 0, 0.2 );
+	border:1px solid rgba( 0, 0, 0, 0.5 );
+}
+
+#next, #previous {
+	font-family: 'Permanent Marker', cursive;
+	position:absolute;
+	text-decoration:none;
+	color:#000;
+	font-size:100%;
+	cursor:pointer;
+	outline:0;
+	opacity: .5;
+	transition: opacity 1s;
+}
+
+#next:hover, #previous:hover {
+	opacity: 0.8;
+}
+
+#next {
+		top:130px;
+		right:80px;
+}
+#previous {
+		top:130px;
+		left:80px;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: black;
+	margin: 0 auto;
+}
+
+.select-level{
+	text-align-last: center;
+	/* position: absolute; */
+	padding: 28px 0 0 0;
+	bottom: 0;
+	margin-left: -65px; 
+	left: 50%;
+	/* display: flex;
+	flex-direction: row; */
+	/* width: 300px; */
+	vertical-align: center;
+
+}
+
+#select-label{
+	/* top: -27px; */
+	/* margin-right: 300px; */
+	/* margin-right: -1000px; 
+	left: 50%;
+	color:#000;
+	font-size:150%; */
+	color:rgba( 0, 0, 0, 0.5 ) !important;
+	font:300%/40px 'Luckiest Guy', cursive;
+	position: absolute; 
+	bottom: calc(50% - 30px);
+	font-size: 2em;
+	bottom: 0;
+	/* width: 150px; */
+	margin-left: -85px;
+	left: 50%;
+	text-align: center;
+
+}
+
+select{
+	/* margin-left: 100px; */
+	cursor:pointer;
+	font: 300%/40px 'Luckiest Guy', cursive;
+	background-color: rgba(0, 0, 0, 0.0);
+	color:rgba(0, 0, 0, 0.5) !important;
+	font-size: 150%;
+	/* width: 115px; */
+	height: 20px; 
+	text-align: center;
+	text-align-last: center;
+	-moz-text-align-last: center;
+	position: absolute;
+	/* top: 0px; */
+	/* right: -30px; */
+	/* margin: 0 auto; */
+	/* direction: rtl; */
+
+	bottom: 0;
+	margin-left: -55px;
+	left: 50%;
+	text-align: center;
+}
 
 	
