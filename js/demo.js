@@ -32,7 +32,6 @@ var games = [
     { img: 'images/ant.png', color:'#BCC9BB', word: 'ant', sound: '' },
     { img: 'images/icon_ladybug.png', color:'#AA86AA', word: 'ladybug', sound: '' },
     { img: 'images/icon_penguinjump.png', color:'#8688A8', word: 'penguin', sound: '' },
-      
     
 ];
 
