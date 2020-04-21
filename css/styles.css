@@ -70,7 +70,7 @@ body {
 		color:#FFF;
 	}
 	#container {
-	background:url(../img/bg.png) no-repeat top center;
+	/* background:url(../img/bg.png) no-repeat top center; */
 	width:800px;
 	height:570px;
 	margin:0px auto 0 auto;
@@ -228,4 +228,66 @@ select{
 	text-align: center;
 }
 
-	
+
+/* Background */
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.started {
+	opacity: 1;
+}
+
+.background:before,
+.background:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: url(../assets/images/background.svg);
+	background-size: 100% 100%;
+	animation: spin infinite ease-in-out;
+}
+    
+.background:before{
+	animation-duration: 110000ms;
+	opacity: 0.10;
+}
+
+.background:after{
+        animation-duration: 80000ms;
+        opacity: 0.20;
+}
+
+.spining{
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: spin;
+}
+
+@keyframes spin {
+	0%{
+	transform: rotate(0deg) scale(1)
+	}
+	25%{
+	transform: rotate(90deg) scale(.5)
+	}
+	50%{
+	transform: rotate(180deg) scale(1.2)
+	}
+	75%{
+	transform: rotate(270deg) scale(.5)
+	}
+	100%{
+	transform: rotate(360deg) scale(1)
+	}
+}

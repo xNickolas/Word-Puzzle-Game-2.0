@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1984px" height="1978px" viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient">
+            <stop stop-color="#DDDCDC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -1.000000)" fill="url(#linearGradient)">
+            <polygon transform="translate(1121.000000, 1470.000000) rotate(-15.000000) translate(-1121.000000, -1470.000000) " points="1121 970 1226 1970 1016 1970 "></polygon>
+            <polygon transform="translate(1346.000000, 1340.799603) rotate(-45.000000) translate(-1346.000000, -1340.799603) " points="1346 840.799603 1451 1840.7996 1241 1840.7996 "></polygon>
+            <polygon transform="translate(1474.000000, 1115.831734) rotate(-75.000000) translate(-1474.000000, -1115.831734) " points="1474 617.331734 1579 1614.33173 1369 1614.33173 "></polygon>
+            <polygon transform="translate(1476.000000, 864.500000) rotate(-105.000000) translate(-1476.000000, -864.500000) " points="1476 364.5 1581 1364.5 1371 1364.5 "></polygon>
+            <polygon transform="translate(1346.799603, 639.500000) rotate(-135.000000) translate(-1346.799603, -639.500000) " points="1346.7996 139.5 1451.7996 1139.5 1241.7996 1139.5 "></polygon>
+            <polygon transform="translate(1121.831734, 511.500000) rotate(-165.000000) translate(-1121.831734, -511.500000) " points="1121.83173 13 1226.83173 1010 1016.83173 1010 "></polygon>
+            <polygon transform="translate(510.500000, 1115.000000) rotate(-285.000000) translate(-510.500000, -1115.000000) " points="510.5 615 615.5 1615 405.5 1615 "></polygon>
+            <polygon transform="translate(639.700397, 1340.000000) rotate(-315.000000) translate(-639.700397, -1340.000000) " points="639.700397 840 744.700397 1840 534.700397 1840 "></polygon>
+            <polygon transform="translate(864.668266, 1468.000000) rotate(-345.000000) translate(-864.668266, -1468.000000) " points="864.668266 969.5 969.668266 1966.5 759.668266 1966.5 "></polygon>
+            <polygon transform="translate(864.500000, 510.500000) rotate(-195.000000) translate(-864.500000, -510.500000) " points="864.5 10.5 969.5 1010.5 759.5 1010.5 "></polygon>
+            <polygon transform="translate(639.500000, 639.700397) rotate(-225.000000) translate(-639.500000, -639.700397) " points="639.5 139.700397 744.5 1139.7004 534.5 1139.7004 "></polygon>
+            <polygon transform="translate(511.500000, 864.668266) rotate(-255.000000) translate(-511.500000, -864.668266) " points="511.5 366.168266 616.5 1363.16827 406.5 1363.16827 "></polygon>
+        </g>
+    </g>
+</svg>

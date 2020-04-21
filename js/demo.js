@@ -159,7 +159,7 @@ $( function() {
             .bind( 'click', function() {
                 gameSound.play();
             });
-
+        
         // Build model
         var modelLetters = game.word.split( '' );
 
