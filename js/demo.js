@@ -173,6 +173,8 @@ $( function() {
 
         $models.width( letterWidth * $models.find( 'li' ).length );
 
+        // setAnimation($models, 'shown');
+
         // Build shuffled letters
         var letters  = game.word.split( '' ),
             shuffled = letters.sort( function() { return Math.random() < 0.5 ? -1 : 1 });
@@ -183,7 +185,7 @@ $( function() {
 
         // positon and angle of the letters cards 
         $letters.find( 'li' ).each( function( i ) {
-            var top   = ( $models.position().top ) + ( Math.random() * 100 ) + 80,
+            var top   = ( $models.position().top ) + ( Math.random() * 100 ) + 60,
                 left  = ( $models.offset().left - $container.offset().left ) + ( Math.random() * 20 ) + ( i * letterWidth ),
                 angle = ( Math.random() * 30 ) - 10;
 
@@ -269,6 +271,22 @@ $( function() {
             '-o-transform': 'rotate(' + angle + 'deg)',
             'transform': 'rotate(' + angle + 'deg)'
         });
+    }
+
+    function setAnimation($elmt, className, remove) {
+        $elmt.classList.remove(className);
+        $elmt.offsetHeight;
+        $elmt.classList.add(className);
+
+        if (remove) {
+            $elmt.addEventListener("animationend", function () {
+                $elmt.classList.remove(className);
+            });
+
+            $elmt.addEventListener("transitionend", function () {
+                $elmt.classList.remove(className);
+            });
+        }
     }
 
     buildGame( idx );
