@@ -8,11 +8,37 @@ Complementary Color:
 
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 
+*,
+*:after,
+*:before {
+	/* box-sizing: border-box; */
+	/* margin: 0; */
+	padding: 0;
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+/* html{
+	height: 100%;
+	background: #84AC1F;
+	overflow: hidden;
+} */
+
 body {
+	background: #32cd32;
+	transition: background-color .25s;
+	height: 100%;
+	position: relative;
+	font: 300%/40px 'Permanent Marker', cursive; /*'Permanent Marker'*/
+	background: linear-gradient(transparent, rgba(black, .3));
+}
+	
+/* body {
 	background:#444;
 	font:300%/40px 'Luckiest Guy', cursive;
 	color:#000;
-}
+} */
 
 #warning {
 	display:none;
@@ -65,29 +91,73 @@ body {
 	position:relative;
 	padding:0;
 }
-	#footer a {
-		text-decoration:none;
-		color:#FFF;
-	}
-	#container {
-	/* background:url(../img/bg.png) no-repeat top center; */
-	width:800px;
-	height:570px;
-	margin:0px auto 0 auto;
-	position:relative;
-	padding:110px 0 0 0;
-	}
+
+#footer a {
+	text-decoration:none;
+	color:#FFF;
+}
+
+#container {
+/* background:url(../img/bg.png) no-repeat top center; */
+width:800px;
+height:570px;
+margin:0px auto 0 auto;
+position:relative;
+padding:110px 0 0 0;
+}
 
 #models {
 	margin:0 auto;
 	padding:0;
 }
 
-#picture {
+/* #picture {
 	display:block;
 	width:256px;
 	height:256px;
 	margin:0 auto;
+} */
+
+#picture{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin: -100px -100px;
+	animation: bounce 0.75s 1 linear;
+	cursor: pointer;
+}
+
+.bouncing{
+	animation-fill-mode: both;
+	animation-duration: 0.75s;
+	animation-name: bounce;
+}
+
+@keyframes bounce{
+
+	from, 20%, 40%, 60%, 80%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+	}
+	0%{
+		transform: scale3d(.3, .3, .3)
+	}
+	20%{
+		transform: scale3d(1.1, 1.1, 1.1)
+	}
+	40%{
+		transform: scale3d(.9, .9, .9)
+	}
+	60%{
+		transform: scale3d(1.03, 1.03, 1.03)
+	}
+	80%{
+		transform: scale3d(.97, .97, .97)
+	}
+	to{
+		transform: scale3d(1, 1, 1)
+	}
 }
 
 #models li, #letters li {
