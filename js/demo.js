@@ -185,7 +185,7 @@ $( function() {
 
         // positon and angle of the letters cards 
         $letters.find( 'li' ).each( function( i ) {
-            var top   = ( $models.position().top ) + ( Math.random() * 100 ) + 60,
+            var top   = ( $models.position().top ) + ( Math.random() * 100 ) + 60 + 355,
                 left  = ( $models.offset().left - $container.offset().left ) + ( Math.random() * 20 ) + ( i * letterWidth ),
                 angle = ( Math.random() * 30 ) - 10;
 
@@ -218,11 +218,11 @@ $( function() {
             drop: function( e, ui ) {
                 var modelLetter      = $( this ).text(),
                     droppedLetter = ui.helper.text();
-
+                console.log("o valor de this é:", $(this).position);
                 if ( modelLetter == droppedLetter ) {
                     ui.draggable.animate( {
-                        top:     $( this ).position().top,
-                        left:     $( this ).position().left
+                        top:  $( this ).position().top,
+                        left: $( this ).position().left
                     } ).removeClass( 'draggable' ).draggable( 'option', 'disabled', true );
                     
                     rotate( ui.draggable, 0 );
